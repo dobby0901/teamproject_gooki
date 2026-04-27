@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour
 { 
     // 기본 스탯 (플레이어 능력치)
-    [Header("Stats")]
+    [Header("스탯")]
     [SerializeField] private float maxHP;     // 최대 체력 (현재 체력의 기준값)
     [SerializeField] private float maxMP;      // 최대 마나 (스킬 사용에 사용)
     [SerializeField] private float attack; // 공격력 (데미지 계산에 사용)
