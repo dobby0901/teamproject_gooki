@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;              // 이동용 컴포넌트
     private Vector2 moveInput;                           // WASD 입력값
+    private WeaponVisibleController weaponVisibleController; //무기 숨기기
 
     private bool isDodging;                              // 현재 구르기 중인지 체크
     private bool canDodge = true;                        // 구르기 가능 여부
@@ -135,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
         // 캐릭터 기준 구르기 방향
         dodgeDirection = transform.forward * moveInput.y + transform.right * moveInput.x;
 
+
         // 입력이 없으면 현재 바라보는 방향으로 구르기
         if (dodgeDirection.sqrMagnitude < 0.001f)
             dodgeDirection = transform.forward;
@@ -167,6 +170,7 @@ public class PlayerMovement : MonoBehaviour
         // 구르기 종료
         isDodging = false;
 
+
         // 무적 종료
         if (playerHealth != null)
             playerHealth.SetInvincible(false);
@@ -184,5 +188,6 @@ public class PlayerMovement : MonoBehaviour
     {
         // 저장된 구르기 방향으로 빠르게 이동
         controller.Move(dodgeDirection * dodgeSpeed * Time.deltaTime);
+
     }
 }

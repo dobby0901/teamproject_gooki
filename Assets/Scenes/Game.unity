@@ -181,6 +181,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 513bc70d3ef780943a201812e5d0aa8a, type: 3}
   m_PrefabInstance: {fileID: 212719029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1203027834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 513bc70d3ef780943a201812e5d0aa8a, type: 3}
+  m_PrefabInstance: {fileID: 212719029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1310776471
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,6 +1577,7 @@ GameObject:
   - component: {fileID: 6451048224484648270}
   - component: {fileID: 6451048224484648269}
   - component: {fileID: 6451048224484648271}
+  - component: {fileID: 6451048224484648272}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1741,6 +1747,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: -0.03, y: 1.06, z: 0.03}
+--- !u!114 &6451048224484648272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5966542191200452592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d14e1d944043c0441861dddc86278b0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponVisibleController
+  weaponObject: {fileID: 1203027834}
 --- !u!4 &6712218209679840957
 Transform:
   m_ObjectHideFlags: 0
